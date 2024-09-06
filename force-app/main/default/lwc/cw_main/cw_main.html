@@ -1,8 +1,10 @@
 <template>
-    <p>
-        <lightning-formatted-text value="Config Workbook" ></lightning-formatted-text>
-    </p>
-    <p>
-        <lightning-button variant="brand" label="Generate Workbook" title="Generate Workbook" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-    </p>
+    <div class="slds-m-horizontal_x-large">
+        <div class="slds-m-vertical_xx-large">
+            <c-cw_header></c-cw_header>
+        </div>
+        <p>
+            <lightning-button variant="brand" label="Generate Workbook" title="Generate Workbook" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </p>
+    </div>
 </template>
