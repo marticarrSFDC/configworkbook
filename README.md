@@ -19,6 +19,6 @@ The `sfdx-project.json` file contains useful configuration information for your 
 
 ## Install notes
 
-Assign self Config Workbook Admin permission set
-Create Google Cloud project, add credentials to Google Sheets API Custom Setting
-Assign Config Workbook User permission set as needed
+- Assign self Config Workbook Admin permission set
+- Create Google Cloud project, add credentials to Google Sheets API Custom Setting
+- Assign Config Workbook User permission set as needed
