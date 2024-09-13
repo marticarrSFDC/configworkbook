@@ -20,6 +20,7 @@
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Config Workbook</label>
     <navType>Standard</navType>
+    <tabs>standard-home</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Config_Workbook_UtilityBar</utilityBar>
 </CustomApplication>

@@ -4,11 +4,19 @@
         <application>Config_Workbook</application>
         <visible>true</visible>
     </applicationVisibilities>
-    <customSettingAccesses>
-        <enabled>true</enabled>
-        <name>Google_Sheets_Credentials__c</name>
-    </customSettingAccesses>
     <description>Adds access for Config Workbook app usage and administration</description>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Config Workbook Admin</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AssignPermissionSets</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewRoles</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewSetup</name>
+    </userPermissions>
 </PermissionSet>

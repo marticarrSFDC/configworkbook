@@ -20,5 +20,7 @@ The `sfdx-project.json` file contains useful configuration information for your 
 ## Install notes
 
 - Assign self Config Workbook Admin permission set
-- Create Google Cloud project, add credentials to Google Sheets API Custom Setting
+- Create Google App, enable Sheets API, and create credentials
+- [System Admin add Google Auth provider](https://kb.sdocs.com/knowledge-base/sdocs/integrations/google-drive-configuration-with-named-credentials/)
+- Update Named Credential to use Auth Provider
 - Assign Config Workbook User permission set as needed

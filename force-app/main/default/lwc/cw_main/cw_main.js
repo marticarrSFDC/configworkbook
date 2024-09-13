@@ -7,6 +7,7 @@ export default class Cw_main extends NavigationMixin(LightningElement) {
     handleClick(event) {
         authorize()
         .then(result => {
+            console.log(result);
             this[NavigationMixin.Navigate](
                 {
                     type: "standard__webPage",

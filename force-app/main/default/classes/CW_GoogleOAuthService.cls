@@ -77,7 +77,7 @@ public with sharing class CW_GoogleOAuthService {
 			HttpResponse res = http.send(req);
 			System.debug('STATUS:' + res.getStatusCode());
 			
-			return (AuthResponse)JSON.deserialize(res.getBody(), AuthResponse.class);
+			return  (AuthResponse)JSON.deserialize(res.getBody(), AuthResponse.class);
 		} catch( System.Exception e) {
 			throw new CW_GoogleServiceException(e);
 		}
@@ -99,6 +99,7 @@ public with sharing class CW_GoogleOAuthService {
 			throw new CW_GoogleServiceException(e);
 		}
 	}
+	
 	
 	public class AuthResponse {
 		public String access_token { get;}
