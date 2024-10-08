@@ -24,3 +24,4 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [System Admin add Google Auth provider](https://kb.sdocs.com/knowledge-base/sdocs/integrations/google-drive-configuration-with-named-credentials/)
 - Update Named Credential to use Auth Provider
 - Assign Config Workbook User permission set as needed
+- Users need to add Named Creds in Personal Settings

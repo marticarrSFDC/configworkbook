@@ -1,35 +1,30 @@
 public with sharing class CW_GoogleSheetsService {
     private static final String GOOGLE_SHEETS_API_URL = 'https://sheets.googleapis.com/v4/spreadsheets/';
-
-    private static CW_GoogleOAuthService authenticator;
-    private static String auth_code {get; set;}
-
-    @AuraEnabled(cacheable=true)
-    public static String authorize() {
-        CW_GoogleOAuthService authenticator = CW_GoogleOAuthService.getInstance();
-        return authenticator.getLoginUrl();
-    }
-
-    @AuraEnabled(cacheable=true)
-    public static void authenticate() {
-        // pull auth code
-        // request auth token
-    }
     
     @AuraEnabled(cacheable=true)
-    public static String createGoogleSheet(String sheetId, String range, String accessToken) {
-        HttpRequest req = new HttpRequest();
-        req.setEndpoint(GOOGLE_SHEETS_API_URL + sheetId + '/values/' + range);
-        req.setMethod('GET');
-        req.setHeader('Authorization', 'Bearer ' + accessToken);
-        
-        Http http = new Http();
-        HttpResponse res = http.send(req);
-        
-        if (res.getStatusCode() == 200) {
-            return res.getBody();
-        } else {
-            throw new CalloutException('Error calling Google Sheets API: ' + res.getStatusCode() + ' ' + res.getBody());
+    public static String createGoogleSheet(String sheetTitle) {
+        try {
+            // Setup the HTTP request
+            String requestBody = JSON.serialize(new Map<String, Object>{
+                'properties' => new Map<String, Object>{ 'title' => 'Test' }
+            });
+
+            HttpRequest req = new HttpRequest();
+            req.setEndpoint('callout:Google_Sheets_API/v4/spreadsheets');
+            req.setMethod('POST');
+            req.setHeader('Content-Type', 'application/json');
+            req.setBody(requestBody);
+
+            Http http = new Http();
+            HttpResponse res = http.send(req);
+
+            if (res.getStatusCode() == 200) {
+                return res.getBody();
+            } else {
+                throw new CalloutException('Failed to create Google Sheet. Status code: ' + res.getStatusCode());
+            }
+        } catch (Exception e) {
+            throw new AuraHandledException('Error occurred: ' + e.getMessage());
         }
     }
     
@@ -37,7 +32,7 @@ public with sharing class CW_GoogleSheetsService {
     @AuraEnabled(cacheable=true)
     public static String getGoogleSheetData(String sheetId, String range, String accessToken) {
         HttpRequest req = new HttpRequest();
-        req.setEndpoint(GOOGLE_SHEETS_API_URL + sheetId + '/values/' + range);
+        req.setEndpoint('callout:Google_Sheets_API/v4/spreadsheets' + sheetId + '/values/' + range);
         req.setMethod('GET');
         req.setHeader('Authorization', 'Bearer ' + accessToken);
         
