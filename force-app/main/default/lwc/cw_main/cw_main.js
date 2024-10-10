@@ -31,7 +31,7 @@ export default class Cw_main extends NavigationMixin(LightningElement) {
             this[NavigationMixin.Navigate]({
                 type: 'standard__webPage',
                 attributes: {
-                    url: 'https://docs.google.com/spreadsheets/d/' + workbook.spreadsheetId
+                    url: workbook.spreadsheetUrl
                 }
             });
         })
