@@ -27,6 +27,13 @@ export default class Cw_main extends NavigationMixin(LightningElement) {
         createGoogleSheet()
         .then(result => {
             console.log(result);
+            const workbook = JSON.parse(result);
+            this[NavigationMixin.Navigate]({
+                type: 'standard__webPage',
+                attributes: {
+                    url: 'https://docs.google.com/spreadsheets/d/' + workbook.spreadsheetId
+                }
+            });
         })
         .catch(error => {
             console.log(error);
