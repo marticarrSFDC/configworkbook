@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
-    <consumerKey>Placeholder_Value</consumerKey>
+    <authorizeUrl>https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&amp;prompt=consent</authorizeUrl>
+    <consumerKey>617509551371-iiugsr83h3ohofb8srjfc7kgib61o159.apps.googleusercontent.com</consumerKey>
     <consumerSecret>Placeholder_Value</consumerSecret>
-    <defaultScopes>refresh_token full</defaultScopes>
+    <defaultScopes>openid https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/drive</defaultScopes>
     <friendlyName>Google</friendlyName>
     <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
     <providerType>Google</providerType>
     <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
     <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
     <sendSecretInApis>true</sendSecretInApis>
+    <tokenUrl>https://accounts.google.com/o/oauth2/token</tokenUrl>
 </AuthProvider>
