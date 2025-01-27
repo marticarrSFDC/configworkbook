@@ -3,7 +3,7 @@ name: Validate against SF Labs org
 on:
   push:
     branches:
-      - dev'
+      - dev
 jobs:
   validate-deployment:
     runs-on: ubuntu-latest
