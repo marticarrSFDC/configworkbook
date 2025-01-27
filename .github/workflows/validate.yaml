@@ -1,13 +1,9 @@
-name: Validate pull request
+name: Validate against SF Labs org
 
 on:
   push:
     branches:
-      - dev
-    types: [opened, synchronize]
-    paths:
-      - 'force-app/**'
-
+      - dev'
 jobs:
   validate-deployment:
     runs-on: ubuntu-latest

@@ -11,4 +11,8 @@
     <description>Adds access for Config Workbook app usage</description>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Config Workbook User</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ApiEnabled</name>
+    </userPermissions>
 </PermissionSet>
