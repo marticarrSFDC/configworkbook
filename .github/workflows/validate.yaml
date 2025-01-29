@@ -51,7 +51,7 @@ jobs:
           steps.run-code-analyzer.outputs.num-sev2-violations > 0 ||
           steps.run-code-analyzer.outputs.num-violations > 10
         run: exit 1
-        
+
   validate-deployment:
     runs-on: ubuntu-latest
     container:
@@ -62,9 +62,9 @@ jobs:
         with:
           fetch-depth: 0
       
-      - name: 'Authenticate using SFDX_AUTH_URL'
+      - name: 'Authenticate using SFLABS_PROD'
         run: | 
-          echo ${{ secrets.SFDX_AUTH_URL }} | sf org login sfdx-url -s -u
+          echo ${{ secrets.SFLABS_PROD }} | sf org login sfdx-url -s -u
 
       - name: 'Validate'
         run: |
