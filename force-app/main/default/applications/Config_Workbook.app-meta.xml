@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
         <actionName>Tab</actionName>
@@ -12,7 +12,8 @@
         <headerColor>#0070D2</headerColor>
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
-    <description>Generate Google Sheet document with the Salesforce metadata (Object, Workflow, Flows, Profiles…) information.</description>
+    <description
+  >Generate Google Sheet document with the Salesforce metadata (Object, Workflow, Flows, Profiles…) information.</description>
     <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>

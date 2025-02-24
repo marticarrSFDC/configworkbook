@@ -28,7 +28,6 @@ log_folder: null # Last calculated by the config command as: "C:\\Users\\MARTI~1
 #       tags: ["Recommended", "Suggestion"]
 # -------------------------------------------
 rules:
-
   # ======================================================================
   # ESLINT ENGINE RULE OVERRIDES
   # ======================================================================
@@ -1382,14 +1381,12 @@ rules:
 #   {property_name} is the name of a property that you would like to override.
 # Each engine may have its own set of properties available to help customize that particular engine's behavior.
 engines:
-
   # ======================================================================
   # ESLINT ENGINE CONFIGURATION
   # To learn more about this configuration, visit:
   #   https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/engine-eslint.html#eslint-configuration-reference
   # ======================================================================
   eslint:
-
     # Whether to turn off the 'eslint' engine so that it is not included when running Code Analyzer commands.
     disable_engine: false
 
@@ -1437,7 +1434,6 @@ engines:
   #   https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/engine-retire-js.html#retirejs-configuration-reference
   # ======================================================================
   retire-js:
-
     # Whether to turn off the 'retire-js' engine so that it is not included when running Code Analyzer commands.
     disable_engine: false
 
@@ -1447,7 +1443,6 @@ engines:
   #   https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/engine-regex.html#regex-configuration-reference
   # ======================================================================
   regex:
-
     # Whether to turn off the 'regex' engine so that it is not included when running Code Analyzer commands.
     disable_engine: false
 
@@ -1466,7 +1461,7 @@ engines:
     #     'tags'              - [Optional] The string array of tag values to apply to this rule by default.
     #                           Default: ['Recommended']
     # ---- [Example usage]: ---------------------
-    # engines: 
+    # engines:
     #   regex:
     #     custom_rules:
     #       "NoTodoComments":
@@ -1485,7 +1480,6 @@ engines:
   #   https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/engine-flowtest.html#flowtest-configuration-reference
   # ======================================================================
   flowtest:
-
     # Whether to turn off the 'flowtest' engine so that it is not included when running Code Analyzer commands.
     disable_engine: false
 
@@ -1500,7 +1494,6 @@ engines:
   #   https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/engine-pmd.html#pmd-configuration-reference
   # ======================================================================
   pmd:
-
     # Whether to turn off the 'pmd' engine so that it is not included when running Code Analyzer commands.
     disable_engine: false
 
@@ -1557,7 +1550,6 @@ engines:
   #   https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/engine-cpd.html#cpd-configuration-reference
   # ======================================================================
   cpd:
-
     # Whether to turn off the 'cpd' engine so that it is not included when running Code Analyzer commands.
     disable_engine: false
 
@@ -1609,7 +1601,6 @@ engines:
 
     # Indicates whether to ignore multiple copies of files of the same name and length.
     skip_duplicate_files: false
-
 # ======================================================================
 # END OF CODE ANALYZER CONFIGURATION
 # ======================================================================
